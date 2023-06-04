@@ -13,7 +13,7 @@ import com.sebastianrpo.tallerdeldulce.R
 import com.sebastianrpo.tallerdeldulce.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
-
+    //Version 1
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
 

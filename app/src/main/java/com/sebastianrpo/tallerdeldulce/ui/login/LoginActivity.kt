@@ -37,7 +37,11 @@ class LoginActivity : AppCompatActivity() {
                 if (pass.length > 6) {
                     loginViewModel.signIn(email, pass)
                 } else {
-                    Toast.makeText(this, "La contraseña debe tener al menos 7 caracteres", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(
+                        this,
+                        "La contraseña debe tener al menos 7 caracteres",
+                        Toast.LENGTH_SHORT
+                    ).show()
                 }
             } else {
                 Toast.makeText(this, "No se permiten espacios en blanco", Toast.LENGTH_SHORT).show()
@@ -52,6 +56,7 @@ class LoginActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, result.error, Toast.LENGTH_SHORT).show()
             }
+            super.finish()
         })
     }
 
@@ -59,11 +64,10 @@ class LoginActivity : AppCompatActivity() {
         super.onStart()
 
         if (loginViewModel.isUserLoggedIn()) {
-            // User is already logged in, do not start MainActivity
-            return
+            // User is already logged in, start MainActivity
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+            finish()
         }
-        // User is not logged in, start SplashActivity
-        val intent = Intent(this, SplashActivity::class.java)
-        startActivity(intent)
     }
 }

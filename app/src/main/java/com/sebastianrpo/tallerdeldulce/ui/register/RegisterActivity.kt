@@ -37,6 +37,7 @@ class RegisterActivity : AppCompatActivity() {
             } else {
                 Toast.makeText(this, "No se permiten espacios en blanco", Toast.LENGTH_SHORT).show()
             }
+            super.finish()
         }
 
         registerViewModel.registerResult.observe(this, Observer { result ->

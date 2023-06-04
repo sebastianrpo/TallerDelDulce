@@ -13,7 +13,7 @@ class RegisterViewModel : ViewModel() {
 
     fun register(email: String, password: String, confirmPassword: String) {
         if (password.length < 7) {
-            _registerResult.value = RegisterResult(success = false, error = "La contraseña debe tener al menos 6 caracteres")
+            _registerResult.value = RegisterResult(success = false, error = "La contraseña debe tener al menos 7 caracteres")
             return
         }
 

@@ -1,5 +1,6 @@
 package com.sebastianrpo.tallerdeldulce.ui.mainactivity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -13,6 +14,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.sebastianrpo.tallerdeldulce.R
 import com.sebastianrpo.tallerdeldulce.databinding.ActivityMainBinding
+import com.sebastianrpo.tallerdeldulce.ui.login.LoginActivity
 
 class MainActivity : AppCompatActivity() {
 
@@ -37,11 +39,16 @@ class MainActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
+        // Verificar si el usuario está autenticado
         val firebaseAuth = FirebaseAuth.getInstance()
-        isUserLoggedIn = firebaseAuth.currentUser != null
-
-
+        if (firebaseAuth.currentUser == null) {
+            // Usuario no autenticado, iniciar LoginActivity
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
+
     override fun onBackPressed() {
         if (supportFragmentManager.backStackEntryCount == 0) {
             // Si no hay fragmentos en la pila, cierra la aplicación

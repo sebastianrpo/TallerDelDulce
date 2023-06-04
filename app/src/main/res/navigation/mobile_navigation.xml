@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.sebastianrpo.tallerdeldulce.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_notices"
+            app:destination="@id/navigation_notices" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_contact"
+            app:destination="@id/navigation_contact" />
+        <action
+            android:id="@+id/action_navigation_home_self"
+            app:destination="@id/navigation_home" />
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_carrito"
+            app:destination="@id/navigation_carrito" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_notices"
+        android:name="com.sebastianrpo.tallerdeldulce.ui.notices.NoticesFragment"
+        android:label="@string/title_notices"
+        tools:layout="@layout/fragment_notices" />
+
+    <fragment
+        android:id="@+id/navigation_contact"
+        android:name="com.sebastianrpo.tallerdeldulce.ui.contact.ContactFragment"
+        android:label="@string/title_contact"
+        tools:layout="@layout/fragment_contact" />
+
+    <fragment
+        android:id="@+id/navigation_carrito"
+        android:name="com.sebastianrpo.tallerdeldulce.ui.carrito.CarritoFragment"
+        android:label="@string/title_carrito"
+        tools:layout="@layout/fragment_carrito" />
+</navigation>

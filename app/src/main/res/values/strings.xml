@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">El Taller Del Dulce</string>
+    <string name="crear_cuenta">Crear una cuenta</string>
+    <string name="nom_y_ap">Nombre y apellido</string>
+    <string name="hint_login">Ej. Sebastian Restrepo</string>
+    <string name="required_field">*Campo obligatorio</string>
+    <string name="email">Correo electrónico</string>
+    <string name="password">Contraseña</string>
+    <string name="rep_password">Repetir contraseña</string>
+    <string name="birth_date">Fecha de nacimiento</string>
+    <string name="register">Registrarse</string>
+    <string name="logo">Logo</string>
+    <string name="accept_terms_conditions">Aceptar términos y condiciones</string>
+    <string name="login">Iniciar sesión</string>
+    <string name="signup_option">¿No tienes cuenta? <u>Regístrate.</u></string>
+    <string name="register_option">¿Ya tienes una cuenta? <u>Inicia sesión</u></string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_notices">Noticias\n</string>
+    <string name="title_contact">Contacto</string>
+    <string name="title_home">Home</string>
+    <string name="tortas">Tortas</string>
+    <string name="postres">Postres</string>
+    <string name="bebidas">Bebidas</string>
+    <string name="title_cart">Carrito de compras\n</string>
+    <string name="title_carrito">Carrito</string>
+</resources>

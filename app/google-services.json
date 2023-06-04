@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "317646905303",
+    "project_id": "eltallerdeldulce-faa15",
+    "storage_bucket": "eltallerdeldulce-faa15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:317646905303:android:05cfa4ebb6e8acbce8f592",
+        "android_client_info": {
+          "package_name": "com.sebastianrpo.tallerdeldulce"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "317646905303-jetceq9avfu5c4j3bho3c30ujhrjd0ea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.sebastianrpo.tallerdeldulce",
+            "certificate_hash": "7212816fae698c6aeb6e3413de623d9712d3e211"
+          }
+        },
+        {
+          "client_id": "317646905303-sfuo35j3874tlb524fcro4d7lk8dmcc8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAlg4q5y6-xQ1AyLKrHsQAQQCsJTFxvOfg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "317646905303-sfuo35j3874tlb524fcro4d7lk8dmcc8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

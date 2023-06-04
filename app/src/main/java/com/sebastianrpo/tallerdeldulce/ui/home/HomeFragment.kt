@@ -1,5 +1,6 @@
 package com.sebastianrpo.tallerdeldulce.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -11,22 +12,36 @@ import com.google.android.material.tabs.TabLayout
 import com.google.firebase.auth.FirebaseAuth
 import com.sebastianrpo.tallerdeldulce.R
 import com.sebastianrpo.tallerdeldulce.databinding.FragmentHomeBinding
+import com.sebastianrpo.tallerdeldulce.ui.login.LoginActivity
+import com.sebastianrpo.tallerdeldulce.ui.login.LoginViewModel
+import com.sebastianrpo.tallerdeldulce.ui.splash.SplashActivity
+
 
 class HomeFragment : Fragment() {
     //Version 1
     private var _binding: FragmentHomeBinding? = null
     private val binding get() = _binding!!
+    private lateinit var firebaseAuth: FirebaseAuth
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
-        //val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
+        val homeViewModel = ViewModelProvider(this)[HomeViewModel::class.java]
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         val root: View = binding.root
+
 
         val sectionsPagerAdapter = SectionsPagerAdapter(requireContext(), parentFragmentManager)
         val viewPager: ViewPager = binding.viewPager
         viewPager.adapter = sectionsPagerAdapter
         val tabs: TabLayout = binding.tabs
         tabs.setupWithViewPager(viewPager)
+        firebaseAuth = FirebaseAuth.getInstance()
+
+        /*binding.logoutButton.setOnClickListener {
+            firebaseAuth.signOut()
+
+            val intent = Intent(requireContext(), LoginActivity::class.java)
+            startActivity(intent)
+        }*/
 
         return root
     }
@@ -35,5 +50,6 @@ class HomeFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
+
 
 }
